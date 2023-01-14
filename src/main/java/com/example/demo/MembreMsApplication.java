@@ -41,6 +41,7 @@ public class MembreMsApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+
 		Etudiant etd1 = new Etudiant( ) ;
 		membreRepository.save(etd1);
 		EnseignantChercheur ens = new EnseignantChercheur("222222","Madame","cc","madame.mm@enis.tn","","123456789",new Date(),"Maitre","ENIS");
@@ -79,6 +80,10 @@ public class MembreMsApplication implements CommandLineRunner {
 		EvenementBean event = evenementProxyService.findEvenementBy(1L);
 		System.out.println(event.getTitre()+ " "+event.getLieu());
 		iMembreServices.affecterauteurToEvenement(1L, 1L);
+
+
 	}
+
+
 
 }
